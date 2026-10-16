@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Formulario Reactivo</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()" aria-label="Cambiar modo oscuro">
+        <ion-icon slot="icon-only" [name]="isDarkMode() ? 'sunny' : 'moon'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Navegación entre modelos -->
+  <ion-toolbar color="light">
+    <ion-segment value="reactive">
+      <ion-segment-button value="reactive" [routerLink]="['/registro']">
+        <ion-label>Reactivo</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="driven" [routerLink]="['/driven']">
+        <ion-label>Template-Driven</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
